@@ -1,0 +1,154 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Student List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="page-container">
+
+    <div class="page-header">
+      <h1>Student List</h1>
+
+      <p>
+        BS Information Technology
+      </p>
+
+      <div class="total-students">
+        Total Students: {{ students.length }}
+      </div>
+    </div>
+
+
+    @if (selectedStudent) {
+
+      <ion-card class="selected-card">
+
+        <ion-card-header>
+          <ion-card-title>
+            Selected Student
+          </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+
+          <h2>{{ selectedStudent.name }}</h2>
+
+          <div class="student-details">
+
+            <p>
+              <strong>ID:</strong>
+              {{ selectedStudent.id }}
+            </p>
+
+            <p>
+              <strong>Gender:</strong>
+              {{ selectedStudent.gender }}
+            </p>
+
+            <p>
+              <strong>Course:</strong>
+              {{ selectedStudent.course }}
+            </p>
+
+            <p>
+              <strong>Year:</strong>
+              {{ selectedStudent.year }}
+            </p>
+
+          </div>
+
+          <ion-button
+            class="close-button"
+            expand="block"
+            (click)="clearStudent()">
+
+            Close
+
+          </ion-button>
+
+        </ion-card-content>
+
+      </ion-card>
+
+    } @else {
+
+      <div class="instruction">
+        <p>
+          Select a student below to view their information.
+        </p>
+      </div>
+
+    }
+
+
+    <div class="student-list">
+
+      @for (student of students; track student.id) {
+
+        <ion-card class="student-card">
+
+          <ion-card-header>
+
+            <ion-card-title>
+              {{ student.name }}
+            </ion-card-title>
+
+          </ion-card-header>
+
+          <ion-card-content>
+
+            <div class="student-details">
+
+              <p>
+                <strong>ID:</strong>
+                {{ student.id }}
+              </p>
+
+              <p>
+                <strong>Gender:</strong>
+                {{ student.gender }}
+              </p>
+
+              <p>
+                <strong>Course:</strong>
+                {{ student.course }}
+              </p>
+
+              <p>
+                <strong>Year:</strong>
+                {{ student.year }}
+              </p>
+
+            </div>
+
+
+            <ion-badge
+              [color]="student.gender === 'Male' ? 'primary' : student.gender === 'Female' ? 'danger' : 'medium'">
+
+              {{ student.gender }}
+
+            </ion-badge>
+
+
+            <ion-button
+              expand="block"
+              class="view-button"
+              (click)="showStudent(student)">
+
+              View Student
+
+            </ion-button>
+
+          </ion-card-content>
+
+        </ion-card>
+
+      }
+
+    </div>
+
+  </div>
+
+</ion-content>

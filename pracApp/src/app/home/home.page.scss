@@ -1,0 +1,153 @@
+ion-header {
+  --background: #2563eb;
+  text-align: center;
+}
+
+ion-toolbar {
+  --background: #2563eb;
+  --color: white;
+}
+
+ion-title {
+  color: white;
+  font-weight: bold;
+}
+
+ion-content {
+  --background: #f4f6f8;
+  color: #000000;
+}
+
+.page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+
+.page-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.page-header h1 {
+  margin: 0;
+  color: #000000;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.page-header p {
+  margin: 8px 0;
+  color: #555555;
+  font-size: 16px;
+}
+
+.total-students {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+
+.instruction {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  text-align: center;
+}
+
+.instruction p {
+  margin: 0;
+  color: #555555;
+}
+
+
+
+.selected-card {
+  margin: 0 0 25px 0;
+  border-left: 5px solid #2563eb;
+  border-radius: 12px;
+  background: white;
+  padding: 20px;
+}
+
+.selected-card ion-card-title {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.selected-card h2 {
+  margin-top: 0;
+  color: #000000;
+  font-size: 24px;
+}
+
+
+
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+
+.student-card {
+  margin: 0;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #dddddd;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+}
+
+.student-card:hover {
+  transform: translateY(-2px);
+  transition: 0.2s;
+}
+
+.student-card ion-card-title {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+.student-details {
+  margin-bottom: 15px;
+}
+
+.student-details p {
+  margin: 8px 0;
+  color: #000000;
+  font-size: 14px;
+}
+
+.student-details strong {
+  color: #333333;
+}
+
+
+ion-badge {
+  margin-bottom: 12px;
+  padding: 7px 12px;
+  font-size: 12px;
+}
+
+
+.view-button {
+  margin-top: 10px;
+}
+
+.close-button {
+  margin-top: 15px;
+}
